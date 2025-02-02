@@ -40,35 +40,23 @@ android {
 }
 
 dependencies {
+    implementation("androidx.core:core-ktx:1.12.0")
 
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.lifecycle.runtime.ktx)
-    implementation(libs.androidx.activity.compose)
-    implementation(platform(libs.androidx.compose.bom))
-    implementation(libs.androidx.ui)
-    implementation(libs.androidx.ui.graphics)
-    implementation(libs.androidx.ui.tooling.preview)
-    implementation(libs.androidx.material3)
-    implementation(libs.volley)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
-    androidTestImplementation(platform(libs.androidx.compose.bom))
-    androidTestImplementation(libs.androidx.ui.test.junit4)
-    debugImplementation(libs.androidx.ui.tooling)
-    debugImplementation(libs.androidx.ui.test.manifest)
+    implementation("androidx.compose.ui:ui:1.5.0")
+    implementation("androidx.compose.material:material:1.5.0")
+    implementation("androidx.compose.ui:ui-tooling-preview:1.5.0")
+    debugImplementation("androidx.compose.ui:ui-tooling:1.5.0")
+
+    implementation("androidx.compose.ui:ui-graphics:1.5.0")
+    implementation("androidx.compose.material3:material3:1.2.0")  // Material 3 kütüphanesini güncelledim
+
+    // Jetpack Compose Navigation
+    implementation("androidx.navigation:navigation-compose:2.7.7")
+
+    // Coil (Resim Yükleme)
     implementation("io.coil-kt:coil-compose:2.4.0")
 
-
-    //navigation
-    // Navigation bileşenini ekleyelim
-    val nav_version = "2.7.7"
-    implementation("androidx.navigation:navigation-compose:$nav_version")
-
-    //coil  modern ve hızlı bir resim yükleme kütüphane
-    implementation("io.coil-kt:compose:2.6.0")
-
-    //material ıcon
-    implementation("androidx.compose.material.icons-core:1.6.5")
-    implementation("androidx.compose.material-icons-extended:1.6.5")
+    // Material Icons
+    implementation("androidx.compose.material:material-icons-core:1.6.5")
+    implementation("androidx.compose.material:material-icons-extended:1.6.5")
 }
